@@ -1,0 +1,18 @@
+[package]
+name = "defaria"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+avian2d = "0.4.1"
+bevy = "0.17.3"
+bevy-tnua = "0.26.0"
+bevy-tnua-avian2d = "0.8.0"
+bevy_ecs_tiled = { version = "0.10.0", features = ["avian"] }
+
+[features]
+default = ["dev"]
+dev = ["bevy/dynamic_linking"]
+
+[profile.dev]
+opt-level = 1
